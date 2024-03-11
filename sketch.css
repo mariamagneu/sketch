@@ -1,3 +1,7 @@
 #myGrid {
     display: flex;
 }
+
+.column {
+    border: 2px black solid;
+}
