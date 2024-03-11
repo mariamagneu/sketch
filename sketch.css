@@ -2,6 +2,8 @@
     display: flex;
 }
 
-.column {
+.rowContainer {
     border: 2px black solid;
+    display: flex;
+    flex-direction: column;
 }
