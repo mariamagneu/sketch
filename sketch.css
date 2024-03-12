@@ -1,8 +1,9 @@
 #myGrid {
     display: flex;
+    flex-wrap: wrap;
 }
 
-.rowContainer {
+.cell {
     border: 2px black solid;
     display: flex;
     flex-direction: column;
