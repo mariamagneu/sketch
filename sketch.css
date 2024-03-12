@@ -3,8 +3,13 @@
     flex-wrap: wrap;
 }
 
-.cell {
+.column {
     border: 2px black solid;
     display: flex;
     flex-direction: column;
+}
+
+.cell {
+    border: 2px red solid;
+    display: flex;
 }
