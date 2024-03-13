@@ -12,10 +12,17 @@ document.addEventListener("DOMContentLoaded", function() {
        		for (let j = 0; j< numRows; j++) {
        		const cell = document.createElement("div");
        		cell.classList.add("cell");
+            cell.classList.add("hover");
+
 					cell.textContent = j + '/' + i;
 					column.appendChild(cell);
     	}    
     }
-    
-     
+    const hover = document.querySelectorAll(".hover");
+    hover.forEach((element) => {
+   		element.addEventListener("mouseover", (event) => {
+        element.style.backgroundColor = "black";
+        });
+    });
+
 });
