@@ -1,21 +1,21 @@
 #myGrid {
     display: flex;
     width: 600px;
+    height: 600px;
     }
 
 .column {
-    border: 2px black solid;
     display: flex;
     flex-direction: column;
-    flex-basis: 20px;
+    flex-basis: 5px;
     flex-grow: 1;
 }
 
 .cell {
-    border: 2px red solid;
+    border: 2px black solid;
     display: flex;
+    flex-basis:5px;
     flex-grow: 1;
-        flex-basis: 20px;
 
     
 }
