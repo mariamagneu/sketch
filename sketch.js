@@ -1,14 +1,16 @@
 document.addEventListener("DOMContentLoaded", function() {
+    const button = document.createElement("button");
+    document.body.appendChild(button)
+    document.body.prepend(button);
+
+    button.textContent = "press me to set grid size";
     const myGrid = document.querySelector("#myGrid")
-    const numColumns = 16; 
-    const numRows = 16;
+    let customGrid = "";
 
-    do {
-        customGrid = parseInt(prompt("Enter a number between 0 and 100:"));
-    } while (customGrid < 0 || customGrid > 100);
-    
 
-    
+
+    button.addEventListener("click", () => {
+    customGrid = parseInt(prompt("insert a number between 0 & 100"));
     for (let i = 0; i < customGrid; i++) {
         const column = document.createElement("div");
         column.classList.add("column");
@@ -27,5 +29,5 @@ document.addEventListener("DOMContentLoaded", function() {
         element.style.backgroundColor = "black";
         });
     });
-
+});
 });
