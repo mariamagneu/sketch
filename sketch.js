@@ -41,14 +41,25 @@ document.addEventListener("DOMContentLoaded", function () {
     
     createStartGrid();
 
+    function getNewGrid() {
+        let newGrid = parseInt(prompt("Enter a number between 1 & 100"));
+        if (newGrid < 1 || newGrid > 100) {
+          return getNewGrid();
+        }
+        else {
+          return newGrid;
+        }
+      }
+      
+
     button.addEventListener("click", () => {
-        customGrid = parseInt(prompt("insert a number between 0 & 100"));
+        newGrid = getNewGrid();
         myGrid.innerHTML="";
-        for (let i = 0; i < customGrid; i++) {
+        for (let i = 0; i < newGrid; i++) {
             const column = document.createElement("div");
             column.classList.add("column");
             myGrid.appendChild(column);
-                   for (let j = 0; j< customGrid; j++) {
+                   for (let j = 0; j< newGrid; j++) {
                    const cell = document.createElement("div");
                    cell.classList.add("cell");
                 cell.classList.add("hover");
