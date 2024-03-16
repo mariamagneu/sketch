@@ -8,6 +8,10 @@ document.addEventListener("DOMContentLoaded", function () {
     let startGrid = 16;
     let newGrid = "";
 
+    const title = document.createElement("h1");
+    title.textContent = "Etch a Sketch - a little browser Game"
+    document.body.appendChild(title);
+    document.body.prepend(title)
 
     function createStartGrid() {
         for (let i = 0; i < startGrid; i++) {
